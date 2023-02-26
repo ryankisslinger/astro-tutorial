@@ -1,35 +1,118 @@
-html {
-  background-color: #f1f5f9;
-  font-family: sans-serif;
+:root {
+  --background-body: #ccc;
+  --text-main: #048a81;
+  --text-secondary: #36393b;
+  --primary-color: #2bc016;
+}
+
+:root.theme-dark {
+  --background-body: #202122;
+  --text-main: #fff;
+  --text-secondary: #ccc;
+  --primary-color: #2bc016;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
 }
 
 body {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
+  margin: auto;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
   line-height: 1.5;
+  background-color: var(--background-body);
+  color: var(--text-main);
+  width: 100%;
+  max-width: 65ch;
+  padding: 5rem;
+  text-align: left;
+  overflow-wrap: break-word;
 }
 
-* {
-  box-sizing: border-box;
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
-h1 {
+p {
   margin: 1rem 0;
-  font-size: 2.5rem;
 }
 
-/* Toggle for dark mode */
+ul {
+  list-style: none;
+}
 
-dark body {
-  background-color: #0d0950;
+li {
+  line-height: 2;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background: #333;
   color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
-.dark .nav-links a {
-  color: #fff;
+.logos-small {
+  display: none;
 }
+
+/* Page Content */
+.page-content {
+  margin: 20px 0;
+}
+
+.page-content h2,
+.page-content h3 {
+  margin: 20px 0;
+}
+
+.page-content h2 {
+  font-size: 40px;
+}
+
+.page-content h3 {
+  font-size: 25px;
+}
+
+@media (max-width: 960px) {
+  .logos-small {
+    display: block;
+    margin: auto;
+  }
+  .logos {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  h1,
+  h2 {
+    text-align: center;
+  }
+}
+
 /* nav styles */
 .hamburger {
   padding-right: 20px;
@@ -41,14 +124,13 @@ dark body {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #a4ff77;
+  background-color: #54C580;
 }
 
 .nav-links {
   width: 100%;
-  top: 5rem;
   left: 48px;
-  background-color: #a4ff77;
+  background-color: #54C580;
   display: none;
   margin: 0;
 } 
@@ -64,7 +146,9 @@ dark body {
 }
 
 .nav-links a:hover, a:focus {
-  background-color: #a4ff77;
+  background-color: #54C580;
+  color: #DED1DA;
+  border-radius: .5em;
 }
 
 .expanded {
